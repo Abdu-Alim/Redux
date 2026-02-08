@@ -1,21 +1,28 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../features/ui/uiSlice";
+import "../styles/header.css";
+
 
 const Header = () => {
-    const dispatch = useDispatch()
-    const theme = useSelector(state => state.ui.theme)
-    
-    return(
-        <header style={{
-            padding: '20px',
-            background: theme === 'light' ? "#eee": "#333",
-            color: theme === 'light' ? '#000' : "#fff"
-        }}>
-            <h1>My site</h1>
-            <button onClick={() => dispatch(toggleTheme())}>
-                Change theme
-            </button>
+    const dispatch = useDispatch();
 
+    return (
+        <header className="header">
+            <div className="header-inner conteiner">
+                <div className="logo">My site on React-Redux</div>
+
+                <nav className="nav">
+                    <a href="#">Main</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <button
+                    className="theme-btn"
+                    onClick={() => dispatch(toggleTheme())} >
+                    Change Theme
+                </button>
+
+            </div>
         </header>
     )
 }

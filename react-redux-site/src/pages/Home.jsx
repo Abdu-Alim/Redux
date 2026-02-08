@@ -1,30 +1,21 @@
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import "../styles/home.css";
 
 const Home = () => {
     const theme = useSelector(state => state.ui.theme);
-    const users = useSelector(state => state.data.users);
+    // const users = useSelector(state => state.data.users);
 
-    return(
-        <main style={{
-            padding: "40px",
-            minHeight: "60px",
-            background: theme === 'light'? "#fff": "#222",
-            color: theme === 'light' ? "#000": "#fff"
-        }}>
-            <h2>Главная страница</h2>
-            <p>Добро пожаловать</p>
-            
-            {}
-            <h3>Список пользователей:</h3>
-            <ul>
-                {users.map(user => (
-                    <li key={user.id}>
-                        {user.name} (возраст: {user.age})
-                    </li>
-                ))}
-            </ul>
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
+
+    return (
+        <main className="home conteiner">
+            <h2>Welcome to the React-Redux Site</h2>
+            <p>This is the home page. Use the navigation above to explore the site.</p>
         </main>
-    );
+    )
 };
 
 export default Home;
