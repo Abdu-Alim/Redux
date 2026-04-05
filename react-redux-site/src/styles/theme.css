@@ -1,21 +1,14 @@
-body.light {
-    background-color: #9b9db2;
-    color: #000000;
-}
-body.dark {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-body.light a {
+body.light{
+    background-color: #ffffff;
     color: #000000;
 }
 
-body.dark a {
+body.dark{
+    background-color: #1e1e1e;
     color: #ffffff;
 }
 
-.conteiner{
+.container {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;

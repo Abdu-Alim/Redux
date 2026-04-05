@@ -1,15 +1,17 @@
-// import { useSelector } from "react-redux";
 import "../styles/footer.css";
+
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="conteiner">
-                <p>2026 my site on REDUX</p>
-                <div className="footer-links">
-                    <a href="#">About us</a>
-                    <a href="#">Contacts</a>
-                </div>
+            <div className="container">
+                <p>2026 мой сайт на REDUX </p>
+
+            <div className="footer-links">
+                <a href="#">О нас </a>
+                <a href="#"> Контакты </a>
+            </div>
+
             </div>
         </footer>
     )

@@ -1,9 +1,6 @@
 .header{
-    margin: auto 20px;
     padding: 20px 0;
-    border-bottom: 1px solid #ccc;
-    background-color: rgba(130, 130, 130, 0.359);
-    border-radius: 20px;
+    border-bottom: 1px solid #ccc; 
 }
 
 .header-inner{
@@ -15,10 +12,9 @@
 .logo{
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
 }
 
-.nav a{
+.nav a {
     margin-left: 20px;
     text-decoration: none;
     font-weight: 500;
